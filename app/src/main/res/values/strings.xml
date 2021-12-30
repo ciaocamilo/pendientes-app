@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">Pendientes App</string>
+    <string name="app_name">Mis Pendientes App</string>
     <string name="welcome">Bienvenido</string>
     <string name="enter">Ingresar</string>
     <string name="task_list">Lista de pendientes</string>
+    <string name="help_text">Agrega una tarea con el botón (+) y toca sostenidamente para eliminarla.</string>
+    <string name="developed_by">Desarrollado por ciaocamilo - Camilo A. Castañeda G.</string>
 </resources>

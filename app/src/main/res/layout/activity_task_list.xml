@@ -13,14 +13,16 @@
         android:layout_weight="6"
         android:background="@color/primaryLightColor"
         android:elevation="30dp"
+        android:layout_marginBottom="10dp"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="30sp"
+            android:textSize="35sp"
             android:gravity="center"
             android:textColor="@color/primaryTextColor"
+            android:fontFamily="casual"
             android:text="@string/task_list"/>
 
 
