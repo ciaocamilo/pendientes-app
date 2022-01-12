@@ -68,12 +68,15 @@ public class TaskListActivity extends AppCompatActivity {
                 String sentence = "INSERT INTO tareas(descripcion) VALUES ('"+tarea+"')";
                 conexion_bd.insertData(sentence);
 
+                imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+
                 cargarTareas();
             }
         });
         builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+                imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
                 dialog.cancel();
             }
         });
@@ -100,7 +103,9 @@ public class TaskListActivity extends AppCompatActivity {
     }
 
     /***** Adicional eliminar *******/
-    public void eliminarTarea(String tarea) {
+    public void eliminarTarea(String tarea_caracter) {
+        // Elimina caracter adicional
+        String tarea = tarea_caracter.substring(3);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("Se eliminará la tarea de la lista. ¿Está seguro?");
         builder.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
